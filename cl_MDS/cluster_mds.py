@@ -32,9 +32,9 @@
 
 # Import dependencies
 import numpy as np
-from sklearn_mds import _mds
-import kmedoids as km
-from cur import cur
+from cl_MDS.sklearn_mds import _mds
+import cl_MDS.kmedoids as km
+from cl_MDS.cur import cur
 import sys
 from scipy import spatial
 from src.anchor_selection import vertices_module as vmod
@@ -734,12 +734,12 @@ class clMDS:
         * Anchor points (param_anchor)
         Use param_anchor=[p1,p2,p3] tu customize the percentiles for the different cluster sizes: 
         1) 149 or less points, 2) from 150 to 1000 points, 3) else.
-        Check anchor_points_ndim (from cluster_mds) for further information.
+        Check anchor_points_ndim (from cl_MDS.cluster_mds) for further information.
 
         * Kernel weight for the distance matrix (eta)
 
         * Transformations (precision_qhull)
-        Check self.convexity_check (from cluster_mds) and scipy.spatial.ConvexHull for further 
+        Check self.convexity_check (from cl_MDS.cluster_mds) and scipy.spatial.ConvexHull for further 
         information.
 
         """
@@ -1988,7 +1988,7 @@ def remove_zero_entries(M, return_indices=False):
 # This method chooses the kmedoids clustering with minimum intra-cluster incoherence (relative or total)
 def optim_kmedoids(D, n_clusters, incoherence="rel", n_iter=100,  tmax=100, 
                    init_Ms="random", n_iso=None, verbose=False):
-    from kmedoids_python import kmedoids
+    from cl_MDS.kmedoids_python import kmedoids
     if verbose:
         print("")
     for t in range(0, n_iter):

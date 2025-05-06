@@ -11,7 +11,7 @@ import matplotlib.pyplot as plt
 from matplotlib.ticker import NullFormatter
 
 from sklearn.metrics import pairwise_distances
-import cluster_mds as clmds
+import cl_MDS.cluster_mds as clmds
 
 #______Suplementary functions_________________________________
 

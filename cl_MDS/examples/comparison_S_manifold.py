@@ -9,7 +9,7 @@ from time import time
 from functools import partial
 from sklearn import manifold, datasets, metrics, decomposition
 import umap
-import cluster_mds as clmds
+import cl_MDS.cluster_mds as clmds
 
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D

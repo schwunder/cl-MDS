@@ -8,7 +8,7 @@
 import numpy as np
 from sklearn import manifold, datasets, metrics
 from time import time
-import cluster_mds as clmds
+import cl_MDS.cluster_mds as clmds
 
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D

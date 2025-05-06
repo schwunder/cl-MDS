@@ -5,7 +5,7 @@
 #       uncomment ## lines to use different options
 ###################################################################
 import numpy as np
-import cluster_mds as clmds
+import cl_MDS.cluster_mds as clmds
 
 #~~~~~~~~~~~ Initialization parameters ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # n. of clusters
@@ -52,7 +52,7 @@ dir_medoids = dirname + 'medoids/'
 ## custom_sparse = np.loadtxt('improved_sparse_set.txt', dtype=int)
 
 # 2) Compute a custom sparse set using sparsify_module
-import sparsify_module as spmod
+import cl_MDS.sparsify_module as spmod
 n_sparse = 1000 # reference size of the sparse set
                 # (some methods increase/decrease it a bit)
 P_med = 40 # approx. percentage of medoids in the sparse set

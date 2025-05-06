@@ -3,7 +3,7 @@
 #                  (distance matrix)
 ##############################################################
 import numpy as np
-import cluster_mds as clmds
+import cl_MDS.cluster_mds as clmds
 
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Create a custom distance matrix using a linear combination of kernels

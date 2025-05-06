@@ -3,7 +3,7 @@
 #                         (simple)
 ##############################################################
 import numpy as np
-import cluster_mds as clmds
+import cl_MDS.cluster_mds as clmds
 
 # Initialize clMDS class
 data = clmds.clMDS(atoms='qm9_F_struct.xyz',

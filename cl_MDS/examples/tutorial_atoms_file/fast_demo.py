@@ -2,7 +2,7 @@
 #                      cl-MDS demo
 ##############################################################
 import numpy as np
-import cluster_mds as clmds
+import cl_MDS.cluster_mds as clmds
 import time
 print("________________________________________________________")
 print("________________________________________________________")

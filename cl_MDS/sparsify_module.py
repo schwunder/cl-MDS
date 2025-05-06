@@ -4,8 +4,8 @@
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 import numpy as np
-import kmedoids as km
-import cluster_mds as clmds
+import cl_MDS.kmedoids as km
+import cl_MDS.cluster_mds as clmds
 import sys
 
 
