@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cl-MDS"
+version = "0.1.0"
+description = "Cluster-based multidimensional scaling embedding tool"
+readme = "README.md"
+license = { file = "LICENSE.md" }
+authors = [
+  { name="Patricia Hernández-León" },
+  { name="Miguel A. Caro" },
+]
+dependencies = [
+  "numpy>=1.18",                # required
+  "scikit-learn>=0.24",         # required
+  "matplotlib",                 # required for examples/plots
+  "scipy",                      # required for spatial/metrics
+  "ase",                        # required for atomic structure examples
+  "joblib",                     # required for scikit-learn parallel processing
+  "kmedoids",                   # required for k-medoids clustering
+  "cur",                        # required for CUR decomposition
+  "umap-learn",                 # now core, for comparison_S_manifold.py
+  "ovito",                      # now core, for advanced atomic rendering
+  # "quippy-ase",               # provides the 'quippy' module for atomic descriptors (optional, not on PyPI)
+  # "quippy",                   # optional, for atomic descriptors (not on PyPI, see README)
+]
+
+[tool.setuptools]
+packages = ["cl_MDS", "cl_MDS.sklearn_mds"]
+include-package-data = true
+
+[tool.setuptools.package-data]
+"cl_MDS" = [
+  "examples/*",
+  "tests/*",
+  "../build_libraries.sh",
+  "../src/*"
+]
+
+[project.optional-dependencies]
+quippy = [
+  "quippy-ase" # Not on PyPI, see README for installation instructions
+] 
